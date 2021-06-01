@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="p5.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script> 
+    <script src="message.js"></script>
+    <script src="joueur.js"></script>
+    <script src="board.js"></script>
+    <script src="Tuile.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="decss.css">
+    <title>Jeux du serpent</title>
+</head>
+<body>
+
+  <div class="grid-container">   
+    <!-- HEADER-->
+    <div class="Header" style="position:relative">
+      Jeux du serpent / échelle
+      <button id="btnNewgame" style="float:right" class="btnPanel">NOUVELLE PARTIE</button>
+      <button id="btnReset" style="float:right" class="btnPanel">INSTRUCTIONS</button>
+
+    </div>
+      
+    <!-- BOARD-->
+    <div class="Board">
+      <div id='intro'>       
+        <p>Bienvenue au jeu du serpent/échelle<br> 
+        de madame Yoga</p>
+          <ol>
+            <li>choisir le nombre de joueurs (1-4)</li>
+            <li>cliquez "NOUVELLE PARTIE"</li>
+            <li>cliquez</li>
+          </ol>
+          <span style="font-size:.5em; float: right;">v0.3</span>
+       </div>
+       <div id="gameover"> 
+        <p id="winplayer">Joueur x gagne!</p>
+        <p><img id="winplayerimg" src="img/dansefille.gif" alt=""></p>  
+       </div>
+
+      <div id="canvasholder">
+        <div class="video" data-vimeo-url="https://vimeo.com/544344195?autopause=1&amp&api=1"  id="v1"></div>
+        <div class="video" data-vimeo-url="https://vimeo.com/544823789/3a5e120dd7?autopause=1&amp&api=1"  id="v2"></div>
+      </div>
+    
+    </div>
+    <!-- PANEL-->
+    <div class="Panel">
+      <div>
+        <span>Yogis:</span>
+        <input id="nbPlay" class="NbPlayers" type="number" min="1" max="4" value="2" step="1" >
+      </div>
+      <hr>
+      <div style="margin-top: 5px; margin-bottom: 10px"><img src="img/Logo.png" width=75% alt=""></div>
+      <hr>
+      <div><button id="btnRoll"></button></div>
+      <hr>
+      <div>
+        <span id="test" style="font-size:1em"></span>
+
+        <div><span id="remain" style="font-size: 5em">0</span></div>
+      </div>
+      <hr>
+      <!-- DE-->
+      <div class="dice">
+        <ol class="die-list even-roll" data-roll="1" id="die-1">
+          <li class="die-item" data-side="1">
+            <span class="dot"></span>
+          </li>
+          <li class="die-item" data-side="2">
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </li>
+          <li class="die-item" data-side="3">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </li>
+          <li class="die-item" data-side="4">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </li>
+          <li class="die-item" data-side="5">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </li>
+          <li class="die-item" data-side="6">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </li>
+        </ol>
+      </div>
+      <hr>
+
+    </div>
+</body>
+</html> 

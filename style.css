@@ -1,0 +1,177 @@
+@font-face {
+  font-family: myfont;
+  src: url(LapsusPro-Bold.otf);
+}
+
+html, body{ 
+    margin:0; 
+    padding:0; 
+    } 
+
+.nbPlay{
+    position: relative;
+    font-size: 4vw;
+    margin: 5pt;
+}
+
+.playImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.25fr .75fr;
+    grid-template-rows: 0.1fr 2.9fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Header Header Header Panel"
+      "Board Board Board Panel";
+    max-width: 1000px;
+    min-width: 500px;
+    max-height: 714px;
+    min-height: 307px;
+  }
+  
+  .Header{ 
+      grid-area: Header; 
+      background-color: #ee60e2;
+      font-family: 'myfont';
+      text-align: left;
+      font-size: 2vw;
+      color: aliceblue;
+      font-weight:bold;
+      padding: 1vh;
+      text-shadow: 3px 3px  15px #120236;   
+    }
+  
+  .Board { 
+      grid-area: Board; 
+      font-size: 3vw;
+      background-color: #ee60e2;  
+      padding-left: 5px;
+    }
+  
+  .Panel {
+       grid-area: Panel; 
+       background-color: #ee60e2;
+       text-align: center;
+       font-family: 'myfont';
+       font-size: 1vw;
+       color: aliceblue;
+    }
+  
+#btnRoll{
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: 8vw;
+    text-align: center;
+    height: 8vw;
+    border-radius: 50%;
+    width: 50%;
+}
+
+.btnPanel{
+    color:rgb(233, 10, 10);
+    height: 5vh;
+    width: 10vw;
+    border-radius: 4px;
+    margin: 5px;
+    font-family: 'myfont';
+    font-size: 1vw;
+    border: 2px solid #120236;
+
+}
+
+#intro{
+  position: absolute;
+  margin: 30px;
+  color: white;
+  font-family: 'myfont';
+
+}
+
+#gameover{
+  position: absolute;
+  margin: 30px;
+  color: red;
+  font-family: 'myfont';
+  text-align-last: center;
+  font-size: 10vh;
+  display: none;
+  -webkit-text-stroke: 3px white;
+}
+    
+#btnJouer{
+    position:static;
+    width: 80%;
+    height: 50px;
+    font-size: 3vw;
+    margin: 25px;
+}
+    
+   
+.video{
+    position: absolute;
+    margin-top: 2em;
+    margin-left: 2em;
+    border: 4pt;
+    border-style: solid;
+    border-color: white;
+    display:flexbox;
+
+} 
+
+#lastNum{
+    font-size: 120px;
+    text-align: center;
+    color:azure;
+    text-shadow: 3px 3px 5px rgb(97, 4, 58);
+    position:aboslute;
+    float:left;
+    bottom: 5px;
+    width: 100%;
+}
+.NbPlayers{
+    font-size: 3vh;
+    font-family: myfont;
+    text-align: center;
+    width: 30pt;
+    margin: 2vh;
+    color:aliceblue;
+    background-color: #c510dd;
+}
+
+#test{
+    font-size: 2vh;
+    text-align: center;
+    color:azure;
+    text-shadow: 3px 3px 5px rgb(97, 4, 58);
+    position:aboslute;
+    float:left;
+    bottom: 5px;
+    width: 100%;
+}
+
+   /* ******************************************************************** */ 
+   /* Clearfix: http://csscreator.com/attributes/containedfloat.php        */
+   /* ******************************************************************** */
+   .clearfix:after {
+    content: "."; 
+    display: block; 
+   height: 0; 
+    clear: both; 
+    visibility: hidden;
+    }
+    
+   .clearfix{display: inline-block;}
+   
+   /* Hides from IE-mac \*/
+   * html .clearfix{height: 1%;}
+   .clearfix{display: block;}
+   /* End hide from IE-mac */  
+
+   
+  
